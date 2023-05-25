@@ -1,0 +1,13 @@
+<h1>New restaurant :</h1>
+
+<%= form_with(model: @restaurant, url: restaurants_path) do |t| %>
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+  <%= t.label :address %>
+  <%= t.text_area :address %>
+
+  <%= t.submit 'Create restaurant'%>
+<% end %>
+
+<br>
+<%= link_to 'Back to "My restaurants"', restaurants_path %>

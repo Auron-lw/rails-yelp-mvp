@@ -1,0 +1,14 @@
+<h1>Edit Restaurant :</h1>
+
+<%= form_with model: @restaurant do |t| %>
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+  <%= t.label :address %>
+  <%= t.text_area :address %>
+  <%= t.label :category %>
+  <%= t.check_box :category %>
+  <%= t.submit 'Edit restaurant'%>
+<% end %>
+
+<br>
+<%= link_to 'Back to "My restaurant"', restaurants_path %>
